@@ -1,4 +1,4 @@
-# aerial-view-image-translation
+# Aerial View Image Translation
 
 # Overview
 
@@ -26,7 +26,9 @@ This project provides a script for testing a trained image translation model usi
 
 ## Usage
 1. Navigate to the directory containing the script.
-2. Run the script with the desired command-line arguments:
+2. Download the input data and pretrained weights using this link
+   https://drive.google.com/file/d/1wqMZE3eKIsNip7to4WcmW0F5-UWqNz7M/view?usp=sharing
+4. Run the script with the desired command-line arguments:
     ```css
     python main.py [--model_path MODEL_PATH] [--data_dir DATA_DIR] [--results_dir RESULTS_DIR] [--type TYPE]
     ```
@@ -41,5 +43,26 @@ This project provides a script for testing a trained image translation model usi
 - The script automatically selects the appropriate input domain based on the specified data type.
 
 ## Example
+
+### SAR to EO
+
+```css
+python main.py --model_path pretrained/sar2eo/SAR_EO.pth --data_dir input/sar2eo --results_dir results/sar2eo --type SAREO
+```
+
+### SAR to IR
+
 ```css
 python main.py --model_path pretrained/sar2ir/SAR_IR.pth --data_dir input/sar2ir --results_dir results/sar2ir --type SARIR
+```
+
+### SAR to RGB
+
+```css
+python main.py --model_path pretrained/sar2rgb/SAR_RGB.pth --data_dir input/sar2rgb --results_dir results/sar2rgb --type SARRGB
+```
+
+### RGB to IR
+
+```css
+python main.py --model_path pretrained/rgb2ir/RGB_IR.pth --data_dir input/rgb2ir --results_dir results/rgb2ir --type RGBIR
