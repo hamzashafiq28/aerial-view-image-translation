@@ -2,10 +2,10 @@
 
 # Overview
 
-This project provides a script for testing a trained image translation model using PyTorch. The script takes input images from a specified directory, performs inference using the trained model, and saves the translated images to a specified results directory.
+This project provides a script for testing a trained image translation model using PyTorch. The script takes input SAR or RGB images, performs inference using the trained model, and saves the translated images (EO, IR, RGB) to a specified results directory.
 
 ## Requirements
-- Python 3.x
+- Python 3.9
 - PyTorch
 - torchvision
 - numpy
@@ -17,6 +17,9 @@ This project provides a script for testing a trained image translation model usi
     git clone <repository_url>
     ```
 2. Install the required dependencies:
+ ```bash
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    ```
     ```bash
     pip install -r requirements.txt
     ```
@@ -32,11 +35,6 @@ This project provides a script for testing a trained image translation model usi
     - `--results_dir`: Directory to save the resulting translated images (default: 'results/sar2ir').
     - `--type`: Type of input data ('SAREO', 'SARRGB', 'SARIR', 'RGBIR') (default: 'SARIR').
 
-## Customization
-You can customize the behavior of the script by modifying the following variables in the script:
-- `Model`: Dictionary mapping input data types to corresponding generator models.
-- `custom_dataset_dict`: Dictionary mapping input data types to corresponding dataset classes.
-- `input`: Dictionary mapping input data types to their domains ('SAR' or 'RGB').
 
 ## Notes
 - Ensure that the directory paths provided exist and contain the necessary data.
