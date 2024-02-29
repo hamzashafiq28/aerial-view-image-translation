@@ -28,6 +28,7 @@ This project provides a script for testing a trained image translation model usi
 1. Navigate to the directory containing the script.
 2. Download the input data and pretrained weights using this link
    https://drive.google.com/file/d/1wqMZE3eKIsNip7to4WcmW0F5-UWqNz7M/view?usp=sharing
+   Extract the zip file in the project directory
 4. Run the script with the desired command-line arguments:
     ```css
     python main.py [--model_path MODEL_PATH] [--data_dir DATA_DIR] [--results_dir RESULTS_DIR] [--type TYPE]
