@@ -17,7 +17,7 @@ This project provides a script for testing a trained image translation model usi
     git clone <repository_url>
     ```
 2. Install the required dependencies:
- ```bash
+     ```bash
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
     ```
     ```bash
