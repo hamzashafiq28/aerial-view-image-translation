@@ -37,9 +37,9 @@ requests==2.31.0
 scipy==1.12.0
 six==1.16.0
 sympy==1.12
-torch==1.9.1+cu113
-torchvision==0.10.1+cu113
-torchaudio==0.9.1
+#torch==1.9.1+cu113
+#torchvision==0.10.1+cu113
+#torchaudio==0.9.1
 
 #torchaudio==2.1.2
 #torchvision==0.16.2

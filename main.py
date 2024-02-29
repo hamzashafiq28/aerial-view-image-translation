@@ -31,7 +31,16 @@ def main(generator, custom_dataset, model_path, data_dir, results_dir, input):
 
         #generator.load_state_dict(torch.load(model_path))
     else:
-        generator.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+        #generator.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+
+        model_state_dict = torch.load(model_path, map_location=torch.device('cpu'))
+
+        # Remove the 'module.' prefix from the keys if present
+        if any(key.startswith('module.') for key in model_state_dict.keys()):
+            model_state_dict = {key.replace('module.', ''): value for key, value in model_state_dict.items()}
+
+        # Load the modified state dict into the model
+        generator.load_state_dict(model_state_dict)
 
     # Load test dataset
     # Load test dataset
