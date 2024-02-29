@@ -14,7 +14,7 @@ This project provides a script for testing a trained image translation model usi
 ## Installation
 1. Clone this repository:
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/hamzashafiq28/aerial-view-image-translation.git
     ```
 2. Install the required dependencies:
      ```bash
